@@ -3,20 +3,21 @@ import os
 import csv
 
 # Path to your CSV file
-csv_path = (r'F:\bootcamp_work\python-challenge\PyBank\Resources\budget_data.csv')
+#This path is to an extrenal drive I have my class documents stored 
+budget_data_csv = os.path.join("F:\\","bootcamp_work", "python-challenge", "PyBank", "Resources", "budget_data.csv")
 
 #Initilize Variables/Also set them to 0 so counts start correctly
-Total_Months = 0
+Total_Months = 0 
 Total = 0
-Profit_Loss = 0
-Profit_Changes = []
+Profit_Loss = 0  #profits or losses
+Profit_Changes = []  #classifys values as a list
 Greatest_Increase = ["", 0]   #Add Date with greatest increase and set count to 0
 Greatest_Decrease = ["", 0]   #Add Date with greatest decrease and set count to 0
-Change = 0
+Change = 0  #Sets value placeholder
 
 
 # Open and read the CSV file
-with open (csv_path, 'r') as csv_file:
+with open(budget_data_csv) as csv_file:
 
     # Create a CSV reader
     csvreader = csv.reader(csv_file, delimiter=',')
@@ -52,21 +53,26 @@ with open (csv_path, 'r') as csv_file:
 #Post Average Change
 Average_Change = sum(Profit_Changes) / len(Profit_Changes)  #Take sum divided by the count
 
-#Print Statments in order of examples with correct spacing
-print("Financial Analysis")
+ 
+#Gives file path to create text file/ And print results in the terminal
+    #State text file/folder path to store text document
+output_file_path = os.path.join("F:\\","bootcamp_work", "python-challenge", "PyBank", "analysis", "PyBank_Analysis")  
+with open(output_file_path, 'w') as f:
 
-print("-------------------------")
-
-print(f'Total Months: {Total_Months}')
-print(f'Net total Profit/Losses: ${Total}')
-print(f"Average Change: ${Average_Change:.2f}")
-print(f"Greatest Increase In Profits: {Greatest_Increase[0]} ${Greatest_Increase[1]}")
-print(f"Greatest Decrease In Profits: {Greatest_Decrease[0]} ${Greatest_Decrease[1]}")
+#Print Statments in order of examples 
+    print("Financial Analysis", file=f)  # For f lines to print to text file
+    print("Financial Analysis") #to print results to terminal
+    print("-------------------------", file =f) # For f lines to print to text file
+    print("-------------------------") #to print results to terminal
+    
+    print(f'Total Months: {Total_Months}', file=f) # For f lines to print to text file
+    print(f'Total Months: {Total_Months}') #to print results to terminal
+    print(f'Net total Profit/Losses: ${Total}', file=f) # For f lines to print to text file
+    print(f'Net total Profit/Losses: ${Total}') #to print results to terminal
+    print(f"Average Change: ${Average_Change:.2f}", file=f) # For f lines to print to text file
+    print(f"Average Change: ${Average_Change:.2f}") #to print results to terminal
+    print(f"Greatest Increase In Profits: {Greatest_Increase[0]} ${Greatest_Increase[1]}", file=f) # For f lines to print to text file
+    print(f"Greatest Increase In Profits: {Greatest_Increase[0]} ${Greatest_Increase[1]}") #to print results to terminal
+    print(f"Greatest Decrease In Profits: {Greatest_Decrease[0]} ${Greatest_Decrease[1]}", file=f) # For f lines to print to text file
+    print(f"Greatest Decrease In Profits: {Greatest_Decrease[0]} ${Greatest_Decrease[1]}") #to print results to terminal
       
-
-#Export Text file 
-import os
-import csv
-
-
-# Specify the file to write to
