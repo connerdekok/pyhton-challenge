@@ -71,8 +71,8 @@ with open(output_file_path, 'w') as f:
     print(f"Total: ${Total}") #to print results to terminal
     print(f"Average Change: ${Average_Change:.2f}", file=f) # For f lines to print to text file
     print(f"Average Change: ${Average_Change:.2f}") #to print results to terminal
-    print(f"Greatest Increase In Profits: {Greatest_Increase[0]} ${Greatest_Increase[1]}", file=f) # For f lines to print to text file
-    print(f"Greatest Increase In Profits: {Greatest_Increase[0]} ${Greatest_Increase[1]}") #to print results to terminal
-    print(f"Greatest Decrease In Profits: {Greatest_Decrease[0]} ${Greatest_Decrease[1]}", file=f) # For f lines to print to text file
-    print(f"Greatest Decrease In Profits: {Greatest_Decrease[0]} ${Greatest_Decrease[1]}") #to print results to terminal
+    print(f"Greatest Increase In Profits: {Greatest_Increase[0]} (${Greatest_Increase[1]})", file=f) # For f lines to print to text file
+    print(f"Greatest Increase In Profits: {Greatest_Increase[0]} (${Greatest_Increase[1]})") #to print results to terminal
+    print(f"Greatest Decrease In Profits: {Greatest_Decrease[0]} (${Greatest_Decrease[1]})", file=f) # For f lines to print to text file
+    print(f"Greatest Decrease In Profits: {Greatest_Decrease[0]} (${Greatest_Decrease[1]})") #to print results to terminal
       
