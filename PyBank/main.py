@@ -3,7 +3,6 @@ import os
 import csv
 
 # Path to your CSV file
-#This path is to an extrenal drive I have my class documents stored 
 budget_data_csv = os.path.join("Resources", "budget_data.csv")
 
 #Initilize Variables/Also set them to 0 so counts start correctly

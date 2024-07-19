@@ -2,8 +2,7 @@
 import os
 import csv
 
-# Path to your CSV file
- #This path is to an extrenal drive I have my class documents stored 
+# Path to your CSV file 
 election_data_csv = os.path.join("Resources", "election_data.csv")
 
 # Initialize Variables
