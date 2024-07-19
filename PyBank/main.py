@@ -4,13 +4,13 @@ import csv
 
 # Path to your CSV file
 #This path is to an extrenal drive I have my class documents stored 
-budget_data_csv = os.path.join("F:\\","bootcamp_work", "python-challenge", "PyBank", "Resources", "budget_data.csv")
+budget_data_csv = os.path.join("Resources", "budget_data.csv")
 
 #Initilize Variables/Also set them to 0 so counts start correctly
 Total_Months = 0 
 Total = 0
 Profit_Loss = 0  #profits or losses
-Profit_Changes = []  #classifys values as a list
+Profit_Changes = []  #classifies values as a list
 Greatest_Increase = ["", 0]   #Add Date with greatest increase and set count to 0
 Greatest_Decrease = ["", 0]   #Add Date with greatest decrease and set count to 0
 Change = 0  #Sets value placeholder
@@ -56,7 +56,7 @@ Average_Change = sum(Profit_Changes) / len(Profit_Changes)  #Take sum divided by
  
 #Gives file path to create text file/ And print results in the terminal
     #State text file/folder path to store text document
-output_file_path = os.path.join("F:\\","bootcamp_work", "python-challenge", "PyBank", "analysis", "PyBank_Analysis")  
+output_file_path = os.path.join("analysis", "PyBank_Analysis")  
 with open(output_file_path, 'w') as f:
 
 #Print Statments in order of examples 

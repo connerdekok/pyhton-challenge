@@ -4,7 +4,7 @@ import csv
 
 # Path to your CSV file
  #This path is to an extrenal drive I have my class documents stored 
-election_data_csv = os.path.join("F:\\","bootcamp_work", "python-challenge", "PyPoll", "Resources", "election_data.csv")
+election_data_csv = os.path.join("Resources", "election_data.csv")
 
 # Initialize Variables
 Total_Votes = 0 
@@ -41,7 +41,7 @@ with open(election_data_csv) as csv_file:
 
 
 #Print results of total votes/Text file/Puts election results header
-    output_file_path = os.path.join("F:\\","bootcamp_work", "python-challenge", "PyPoll", "analysis", "PyPoll_Analysis")  
+    output_file_path = os.path.join("analysis", "PyPoll_Analysis")  
     with open(output_file_path, 'w') as f:
 
         print("Election Results", file=f) # For f lines to print to text file
@@ -53,7 +53,7 @@ with open(election_data_csv) as csv_file:
         print("-------------------------", file=f) # For f lines to print to text file
         print("-------------------------") #to print results to terminal
 
-        # Calculate the percentage of votes each candidate won/  Keep these print statements in for loop: to get all 3 canidates listed with the correct information.
+        # Calculate the percentage of votes each candidate won/ Keep these print statements in for loop: to get all 3 candidates listed with the correct information.
         for Candidate, Votes in candidates.items():
             percent = (Votes / Total_Votes) * 100
 
